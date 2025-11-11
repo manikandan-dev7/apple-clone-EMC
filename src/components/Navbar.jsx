@@ -23,18 +23,18 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className='flex justify-center items-center space-x-10 p-3 bg-black ' style={{ color: "#9CA3AF" }}>
-                <h1 className='text-xl text-gray-300'><FaApple /></h1>
+            <div className='flex items-center justify-center p-3 space-x-10 bg-black ' style={{ color: "#9CA3AF" }}>
+                <h1 className='text-xl text-gray-300 hover:text-white'><FaApple /></h1>
 
-                <ul className='hidden md:flex space-x-8 text-[14px] font-semibold'>
+                <ul className='hidden md:flex space-x-8 text-[14px] font-semibold hover:cursor-pointer'>
                     {NavLink.map((link, index) => (
                         <li key={index}>
                             <a href={link.href} className='hover:text-white'>{link}</a>
                         </li>
                     ))}
                 </ul>
-                <h1 className='text-[16px] text-gray-300'><FaSearch /></h1>
-                <h1 className='text-[16px] text-gray-300'><FaShoppingBag /></h1>
+                <h1 className='text-[16px] text-gray-300 hover:text-white'><FaSearch /></h1>
+                <h1 className='text-[16px] text-gray-300 hover:text-white'><FaShoppingBag /></h1>
                 <h1 className='cursor-pointer text-[20px] text-gray-300 md:hidden' onClick={() => setOpen(true)}><FiMenu /></h1>
             </div>
 
@@ -43,15 +43,15 @@ const Navbar = () => {
             </div>
 
             {open && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 text-white z-50 flex flex-col">
-                    <div className="p-5 flex justify-between items-center border-b border-gray-600">
+                <div className="fixed top-0 left-0 z-50 flex flex-col w-full h-full text-white bg-black bg-opacity-80">
+                    <div className="flex items-center justify-between p-5 border-b border-gray-600">
                         <FaApple className="text-2xl" />
                         <button className="text-xl" onClick={() => setOpen(false)}>✕</button>
                     </div>
 
                     <ul className="p-6 space-y-4 text-lg font-semibold">
                         {NavLink.map((item, index) => (
-                            <li key={index} className="hover:text-gray-700 pb-2">
+                            <li key={index} className="pb-2 hover:text-gray-700">
                                 {item}
                             </li>
                         ))}

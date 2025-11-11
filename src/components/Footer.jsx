@@ -1,182 +1,150 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+const sections = [
+  {
+    title: 'Shop and Learn',
+    items: ['Store', 'Mac', 'iPad', 'iPhone', 'Watch', 'Vision', 'AirPods', 'TV & Home', 'AirTag', 'Accessories', 'Gift Cards'],
+  },
+  {
+    title: 'Apple Wallet',
+    items: ['Wallet', 'Apple Card', 'Apple Pay', 'Apple Cash'],
+  },
+  {
+    title: 'Account',
+    items: ['Manage Your Apple Account', 'Apple Store Account', 'iCloud.com'],
+  },
+  {
+    title: 'Entertainment',
+    items: ['Apple One', 'Apple TV+', 'Apple Music', 'Apple Arcade', 'Apple Fitness+', 'Apple News+', 'Apple Podcasts', 'Apple Books', 'App Store'],
+  },
+  {
+    title: 'Apple Store',
+    items: ['Find a Store', 'Genius Bar', 'Today at Apple', 'Group Reservations', 'Apple Camp', 'Apple Store App', 'Certified Refurbished', 'Apple Trade In', 'Financing', 'Order Status', 'Shopping Help'],
+  },
+  {
+    title: 'For Business & Education',
+    items: ['Apple and Business', 'Shop for Business', 'Apple and Education', 'Shop for K-12', 'Shop for College'],
+  },
+  {
+    title: 'Apple Values',
+    items: ['Accessibility', 'Education', 'Environment', 'Inclusion & Diversity', 'Privacy', 'Supply Chain Innovation'],
+  },
+  {
+    title: 'About Apple',
+    items: ['Newsroom', 'Leadership', 'Careers', 'Investors', 'Ethics & Compliance', 'Events', 'Contact Apple'],
+  },
+];
 
 const Footer = () => {
-    return (
-        <>
-            <div className="mt-20 text-[9px] md:text-xs py-20 bg-[#F5F5F7] text-gray-500">
-                <ul className=" px-1 md:px-[20%] space-y-2">
-                    <li className='font-thin hover:underline'>*Listed pricing is Maximum Retail Price (inclusive of all taxes).</li>
-                    <li className='font-thin hover:underline'>‡Includes instant cashback and No Cost EMI.</li>
-                    <li className='font-thin hover:underline'>No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3- or 6-month tenures from most leading card issuers. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your card issuer, subject to your card issuer’s terms and conditions. Minimum order spend applies as per your card issuer’s threshold. No Cost EMI is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Card eligibility is subject to terms and conditions between you and your card issuer. Offer may be revised or withdrawn at any time without any prior notice. Terms apply.</li>
+  const [openIndex, setOpenIndex] = useState(null);
 
-                    <li className='font-thin hover:underline'>Instant cashback is available with the purchase of an eligible product with qualifying American Express, Axis Bank and ICICI Bank cards only. Minimum transaction value of ₹10001 applies. Click here to see instant cashback amounts and eligible devices. Instant cashback is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card issuer. Total transaction value is calculated after any trade-in credit or eligible discount is applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant cashback being recalculated, and any refund may be adjusted to account for instant cashback clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice. Additional terms apply. Instant cashback is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant cashback.</li>
+  const toggle = (i) => {
+    setOpenIndex((prev) => (prev === i ? null : i));
+  };
 
-                    <li className='font-thin hover:underline'>**Mac, iPad and Apple Watch trade-in is available only in-store in India. Apple Retail Online in India does not offer trade-in for Mac, iPad and Apple Watch. Trade‑in values will vary based on the condition, year and configuration of your eligible trade‑in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit. Trade‑in value may be applied towards a qualifying new device purchase. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In-store trade‑in requires presentation of a valid photo ID (local law may require saving this information). Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to refuse, cancel or limit the quantity of any trade‑in transaction for any reason. More details are available from Apple’s trade‑in partner for trade‑in and recycling of eligible devices. Restrictions and limitations may apply.</li>
+  return (
+    <footer className="bg-[#F5F5F7] text-gray-600">
+      {/* small legal / short notes */}
+      <div className="px-4 py-6 mx-auto text-xs max-w-7xl md:px-8 md:py-8 md:text-sm">
+        <p className="mb-2 font-thin">
+          *Listed pricing is Maximum Retail Price (inclusive of all taxes). ‡Includes instant cashback and No Cost EMI.
+        </p>
+        <p className="mb-4 font-thin">
+          No Cost EMI is available with eligible cards on select tenures. Terms apply. Instant cashback is available with select cards. More details on product pages.
+        </p>
+      </div>
 
-                    <li1>1. Live Translation in Phone and FaceTime is available for one-to-one calls in English (UK, US), French (France), German, Portuguese (Brazil) and Spanish (Spain) when Apple Intelligence is enabled on a compatible iPhone, iPad or Mac.</li1>
-                    <li className='font-thin hover:underline'>2. Compared with the glass back of previous-generation iPhone.</li>
-                    <li className='font-thin hover:underline'>3. Compared with previous-generation iPhone.</li>
-                    <li className='font-thin hover:underline'>4. The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 15.93 cm / 6.27″ (iPhone 17, iPhone 17 Pro), 16.63 cm / 6.55″ (iPhone Air) or 17.42 cm / 6.86″ (iPhone 17 Pro Max) diagonally. Actual viewable area is less.</li>
-                    <li className='font-thin hover:underline'>5. FaceTime calling requires a FaceTime-enabled device for the caller and recipient and a Wi‑Fi connection. Availability over a cellular network depends on carrier policies; data charges may apply.</li>
-                    <li className='font-thin hover:underline'>6. Enabled by compatible apps.</li>
-                    <li className='font-thin hover:underline'>Enabled by compatible third-party hardware and software.</li>
-                    <li className='font-thin hover:underline'>7.All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharge</li>
-                    <li className='font-thin hover:underline'>8.Genmoji and Image Playground are available in English, French, German, Italian, Japanese, Portuguese (Brazil) and Spanish when Apple Intelligence is enabled on a compatible iPhone.</li>
+      {/* accordion for mobile, grid for md+ */}
+      <div className="border-t border-gray-300">
+        {/* MOBILE: accordion */}
+        <div className="px-4 py-4 md:hidden">
+          {sections.map((sec, i) => (
+            <div key={sec.title} className="border-b border-gray-200">
+              <button
+                onClick={() => toggle(i)}
+                className="flex items-center justify-between w-full py-3 font-medium text-left text-gray-800"
+                aria-expanded={openIndex === i}
+              >
+                <span>{sec.title}</span>
+                <span className="text-gray-500">{openIndex === i ? '−' : '+'}</span>
+              </button>
+
+              <div
+                className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+                  openIndex === i ? 'max-h-96' : 'max-h-0'
+                }`}
+              >
+                <ul className="py-2 pb-4 pl-2 space-y-2 text-sm text-gray-600">
+                  {sec.items.map((item) => (
+                    <li key={item} className="hover:underline hover:cursor-pointer">
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-
-
-
-                <div className='border-b border-gray-400 text-[9px] md:text-xs px-1 md:px-[20%]' >
-                    <div className='grid grid-cols-5 my-5'>
-                        <div className='flex flex-col md:gap-4'>
-                            <h4 className='text-sm font-semibold text-gray-600'>Shop and Learn</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Store</li>
-                                <li className='hover:cursor-pointer hover:underline'>Mac</li>
-                                <li className='hover:cursor-pointer hover:underline'>iPad</li>
-                                <li className='hover:cursor-pointer hover:underline'>iPhone</li>
-                                <li className='hover:cursor-pointer hover:underline'>Watch</li>
-                                <li className='hover:cursor-pointer hover:underline'>Vision</li>
-                                <li className='hover:cursor-pointer hover:underline'>AirPods</li>
-                                <li className='hover:cursor-pointer hover:underline'>TV & Home</li>
-                                <li className='hover:cursor-pointer hover:underline'>AitTag</li>
-                                <li className='hover:cursor-pointer hover:underline'>Accessories</li>
-                                <li className='hover:cursor-pointer hover:underline'>Gift Cards</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>Apple Wallet</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Wallet</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Card</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Pay</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Cash</li>
-                            </ul>
-                        </div>
-
-                        <div className='flex flex-col gap-4'>
-                            <h4 className='text-sm font-semibold text-gray-600'>Account</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Manage Your Apple Account</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Store Account</li>
-                                <li className='hover:cursor-pointer hover:underline'>iCloud.com</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>Entertainment</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Apple One</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple TV+</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Music</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Arcade</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Fitness+</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple News+</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Podcast</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Books</li>
-                                <li className='hover:cursor-pointer hover:underline'>App Store</li>
-                            </ul>
-                        </div>
-
-                        <div className='flex flex-col gap-4'>
-                            <h4 className='text-sm font-semibold text-gray-600'>Apple Store</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Find a Store</li>
-                                <li className='hover:cursor-pointer hover:underline'>Genius Bar</li>
-                                <li className='hover:cursor-pointer hover:underline'>Today at Apple</li>
-                                <li className='hover:cursor-pointer hover:underline'>Group Reservations</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Camp</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Store App</li>
-                                <li className='hover:cursor-pointer hover:underline'>Certified Refurbished</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Trade In</li>
-                                <li className='hover:cursor-pointer hover:underline'>Financing</li>
-                                <li className='hover:cursor-pointer hover:underline'>Carrier Deals at Apple</li>
-                                <li className='hover:cursor-pointer hover:underline'>Order Status</li>
-                                <li className='hover:cursor-pointer hover:underline'>Shopping Help</li>
-                            </ul>
-                        </div>
-
-                        <div className='flex flex-col gap-4'>
-                            <h4 className='text-sm font-semibold text-gray-600'>For Business</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Apple and Business</li>
-                                <li className='hover:cursor-pointer hover:underline'>Shop for Business</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>For Education</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Apple and Education</li>
-                                <li className='hover:cursor-pointer hover:underline'>Shop for K-12</li>
-                                <li className='hover:cursor-pointer hover:underline'>Shop for College</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>For Healthcare</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Apple in Healthcare</li>
-                                <li className='hover:cursor-pointer hover:underline'>Mac in Healthcare</li>
-                                <li className='hover:cursor-pointer hover:underline'>Health on Apple Watch</li>
-                                <li className='hover:cursor-pointer hover:underline'>Health Records on iPhone and iPad</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>For Government</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Shop for Government</li>
-                                <li className='hover:cursor-pointer hover:underline'>Shop for Veterans and Military</li>
-                            </ul>
-                        </div>
-
-                        <div className='flex flex-col gap-4'>
-                            <h4 className='text-sm font-semibold text-gray-600'>Apple Values</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4'>
-                                <li className='hover:cursor-pointer hover:underline'>Accessibility</li>
-                                <li className='hover:cursor-pointer hover:underline'>Education</li>
-                                <li className='hover:cursor-pointer hover:underline'>Environment</li>
-                                <li className='hover:cursor-pointer hover:underline'>Inclusion and Diversity</li>
-                                <li className='hover:cursor-pointer hover:underline'>Privacy</li>
-                                <li className='hover:cursor-pointer hover:underline'>Racial Equity and Justice</li>
-                                <li className='hover:cursor-pointer hover:underline'>Supply Chain Innovation</li>
-                            </ul>
-
-                            <h4 className='mt-5 text-sm font-semibold text-gray-600'>About Apple</h4>
-                            <ul className='text-[9px] md:text-xs text-gray-500 flex flex-col md:gap-4 '>
-                                <li className='hover:cursor-pointer hover:underline'>Newsroom</li>
-                                <li className='hover:cursor-pointer hover:underline'>Apple Leadership</li>
-                                <li className='hover:cursor-pointer hover:underline'> Career Opportunities</li>
-                                <li className='hover:cursor-pointer hover:underline'> Investors</li>
-                                <li className='hover:cursor-pointer hover:underline'> Ethics & Compliance</li>
-                                <li className='hover:cursor-pointer hover:underline'> Events</li>
-                                <li className='hover:cursor-pointer hover:underline'>  Contact Apple</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className='text-[9px] md:text-xs text-gray-500 my-2 md:my-5'>
-                        <p>More ways to shop: <a href="" className='text-blue-500 underline'>Find an Apple Store</a> or <a href="" className='text-blue-500 underline'>other retailer</a> near you. Or call <a href="" className='text-blue-500 underline'>1-800-MY-APPLE</a> (1-800-692-7753).</p>
-                    </div>
-                </div>
-
-                <div className='text-gray-500 text-xs flex justify-between my-5 flex-wrap md:px-[20%]'>
-                    <div>
-                        <p>Copyrights &copy; 2025  Apple Inc. All rights reserved.</p>
-                    </div>
-                    <div className='flex gap-2'>
-                        <p className='font-medium text-gray-600 hover:underline hover:cursor-pointer'>Privacy Policy </p>
-                        <p>|</p>
-                        <p className='font-medium text-gray-600 hover:underline hover:cursor-pointer'>Terms of Use</p>
-                        <p>|</p>
-                        <p className='font-medium text-gray-600 hover:underline hover:cursor-pointer'>Sales and Refund</p>
-                        <p>|</p>
-                        <p className='font-medium text-gray-600 hover:underline hover:cursor-pointer'>Legal</p>
-                        <p>|</p>
-                        <p className='font-medium text-gray-600 hover:underline hover:cursor-pointer'>Site Map</p>
-                    </div>
-                    <div>
-                        <p>United States</p>
-                    </div>
-
-                </div>
-
-
+              </div>
             </div>
-        </>
-    )
-}
-export default Footer
+          ))}
+        </div>
 
+        {/* DESKTOP: grid */}
+        <div className="hidden px-8 py-8 mx-auto md:block max-w-7xl">
+          <div className="grid grid-cols-5 gap-8">
+            {sections.slice(0, 5).map((sec) => (
+              <div key={sec.title}>
+                <h4 className="mb-3 text-sm font-semibold text-gray-700">{sec.title}</h4>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  {sec.items.map((item) => (
+                    <li key={item} className="hover:underline hover:cursor-pointer">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {/* combine remaining sections in two columns on the right */}
+            <div>
+              {sections.slice(5, 8).map((sec) => (
+                <div key={sec.title} className="mb-6">
+                  <h4 className="mb-3 text-sm font-semibold text-gray-700">{sec.title}</h4>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    {sec.items.map((item) => (
+                      <li key={item} className="hover:underline hover:cursor-pointer">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-6 text-sm text-gray-600">
+            <p>
+              More ways to shop: <a href="#" className="text-blue-600 underline">Find an Apple Store</a> or <a href="#" className="text-blue-600 underline">other retailer</a> near you. Or call <a href="#" className="text-blue-600 underline">1-800-MY-APPLE</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* bottom small legal + links */}
+      <div className="px-4 py-4 mx-auto text-xs text-gray-500 max-w-7xl md:px-8 md:py-6 md:text-sm">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+          <div>© 2025 Apple Inc. All rights reserved.</div>
+
+          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+            <a className="hover:underline" href="#">Privacy Policy</a>
+            <span className="mx-1">|</span>
+            <a className="hover:underline" href="#">Terms of Use</a>
+            <span className="mx-1">|</span>
+            <a className="hover:underline" href="#">Sales and Refunds</a>
+            <span className="mx-1">|</span>
+            <a className="hover:underline" href="#">Legal</a>
+            <span className="mx-1">|</span>
+            <a className="hover:underline" href="#">Site Map</a>
+          </div>
+
+          <div className="text-sm text-gray-600">United States</div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
