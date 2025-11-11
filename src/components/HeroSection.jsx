@@ -1,24 +1,37 @@
 import React from 'react';
 import heroImg from "../assets/images/hero-image.jpg";
+import heroImg1 from "../assets/images/hero1.jpg";
 
 const HeroSection = () => {
-    return (
-        <>
-            <div className="relative bg-black w-full h-auto">
-                <img src={heroImg} alt="hero image" className="w-full h-auto md:px-32 pt-8" />
+  return (
+    <>
+      {/* Hero Section 1 */}
+      <section className="relative w-full bg-[#f5f5f7]">
+        <img
+          src={heroImg}
+          alt="iPhone Hero"
+          className="object-cover w-full h-auto"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black">
+        </div>
+      </section>
 
-                {/* Overlay content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-end pb-6 md:pb-10 text-white text-center">
-                    <button className="rounded-lg py-2 px-4 text-xs md:rounded-3xl text-white md:text-xl bg-[#0076DF] md:py-2 md:px-6 hover:bg-[#045094] font-semibold mb-2">
-                        Buy
-                    </button>
-                    <p className="text-xs md:text-xl font-semibold">
-                        From ₹134900.00* or ₹21650.00/mo. for 6 mo.‡
-                    </p>
-                </div>
-            </div>
-        </>
-    );
+      {/* Hero Section 2 */}
+      <section className="relative flex flex-col items-center w-full py-10 text-center text-white bg-black">
+        <h2 className="mb-6 text-lg font-semibold md:text-2xl">
+          Heat-forged aluminium unibody design for exceptional pro capability.
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <img
+            src={heroImg1}
+            alt="iPhone Colors"
+            className="w-[80vw] md:w-[60vw] h-auto object-contain"
+          />
+        </div>
+      </section>
+    </>
+  );
 };
 
-export default HeroSection
+export default HeroSection;
