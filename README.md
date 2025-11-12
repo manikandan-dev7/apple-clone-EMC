@@ -39,11 +39,11 @@ src/
 
 ---
 
-##🌐 Live Demo
+## 🌐 Live Demo
 
 🔗 [Live Page](https://apple-clone-emc.vercel.app/)
 
-##💡 Future Improvements
+## 💡 Future Improvements
 
 Add scroll animations with Framer Motion
 
@@ -53,7 +53,7 @@ Add a dark/light mode toggle
 
 Expand into a multi-page experience
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
 Manikandan
 Aspiring MERN Developer | Front-End Enthusiast
