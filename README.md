@@ -60,7 +60,7 @@ Aspiring MERN Developer | Front-End Enthusiast
 
 ## 👨‍💻 Connect With Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/sugi-shiva)  
+- 💼 [LinkedIn](https://www.linkedin.com/in/mani-kandan-dev?utm_source=share_via&utm_content=profile&utm_medium=member_android)  
 - 🧑‍💻 [GitHub](https://github.com/sugishiva)   
 - 📧 [Email Me](mailto:sugishiva0@gmail.com)
 
