@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <>
             <div className='flex items-center justify-center p-3 space-x-10 bg-black ' style={{ color: "#9CA3AF" }}>
-                <h1 className='text-xl text-gray-300 hover:text-white'><FaApple /></h1>
+                <h1 className='text-xl text-gray-500 cursor-pointer hover:text-white'><FaApple /></h1>
 
                 <ul className='hidden md:flex space-x-8 text-[14px] font-semibold hover:cursor-pointer'>
                     {NavLink.map((link, index) => (
